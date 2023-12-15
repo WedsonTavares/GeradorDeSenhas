@@ -1,0 +1,123 @@
+/* Estilos globais para todos os elementos */
+* {
+    font-family: sans-serif;
+    width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+/* Estilos para o corpo da página */
+body {
+    background-color: #181818;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Estilos para a logo do gerador de senhas */
+.logo {
+    max-width: 600px;
+    margin-top: 24px;
+}
+
+/* Estilos para o container principal do formulário */
+.container-input {
+    max-width: 480px;
+    margin: 14px 0;
+}
+
+/* Estilos para o texto indicando o tamanho da senha */
+.container-input span {
+    color: #FFF;
+    font-size: 22px;
+}
+
+/* Estilos para o slider que seleciona o tamanho da senha */
+.slider {
+    -webkit-appearance: none;
+    width: 100%;
+    border-radius: 5px;
+    background: #FDFDFD;
+    outline: none;
+    margin-top: 8px;
+}
+
+/* Estilos para o botão de gerar senha */
+.button-cta {
+    height: 40px;
+    background-color: #3EB72B;
+    border: 0;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 40px;
+    color: #FFF;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* Estilos para o container da senha gerada */
+.container-password {
+    max-width: 480px;
+    margin: 14px 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+/* Estilos para o título indicando que a senha foi gerada */
+.title {
+    text-align: center;
+    color: #FFF;
+    font-size: 28px;
+    margin-top: 24px;
+    margin-bottom: 8px;
+}
+
+/* Estilos para a exibição da senha gerada */
+.password {
+    height: 60px;
+    background-color: rgba(0, 0, 0, 0.40);
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFF;
+    border: 1px solid #313131;
+    transition: transform 0.5s;
+}
+
+/* Efeito de escala ao passar o mouse sobre a senha */
+.password:hover {
+    transform: scale(1.05);
+}
+
+/* Estilos para a tooltip indicando que a senha pode ser copiada */
+.tooltip {
+    color: #FFF;
+    position: relative;
+    top: 20px;
+    padding: 6px 8px;
+    background: rgb(15,15,15);
+    text-align: center;
+    font-size: 16px;
+    border-radius: 6px;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+/* Classe para ocultar a tooltip inicialmente */
+.hide {
+    display: none;
+}
+
+/* Exibição da tooltip ao passar o mouse sobre o container da senha */
+.container-password:hover .tooltip {
+    visibility: visible;
+    bottom: 50px;
+    opacity: 1;
+}
